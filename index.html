@@ -27,6 +27,14 @@
   justify-content: center;
 }
 
+        /* Fade-out effect */
+#js-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+
 /* ===== Inner Content ===== */
 .preloader-inner {
   display: flex;
@@ -421,6 +429,28 @@
     © 2025 Rowana Consult • All Rights Reserved<br>
     <a href="#">Privacy Policy</a>
 </footer>
+
+            <script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("js-preloader");
+
+    // Add fade-out class
+    preloader.classList.add("fade-out");
+
+    // Remove from DOM after animation finishes
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600); // matches CSS animation duration (0.6s)
+  });
+</script>
+
+
+
+
+
+
+
+    
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
