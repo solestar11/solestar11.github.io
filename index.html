@@ -13,6 +13,81 @@
             --soft-text: #444;
         }
 
+        /* ===== Preloader Wrapper ===== */
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Inner Content ===== */
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Main Dot ===== */
+.js-preloader .dot {
+  width: 20px;
+  height: 20px;
+  background-color: #A100FF; /* Accenture Purple */
+  border-radius: 50%;
+  margin-bottom: 10px;
+  animation: pulse 0.6s infinite alternate ease-in-out;
+}
+
+/* ===== Three Small Dots ===== */
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #A100FF; /* Accenture Purple */
+  border-radius: 50%;
+  margin: 0 3px;
+  animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+/* ===== Animations ===== */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+        
+
             .contact-form {
     max-width: 500px;
     margin: auto;
