@@ -15,6 +15,79 @@
             --soft-text: #444;
         }
 
+
+        /* Entire banner container */
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Dark overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 16, 76, 0.55); /* Accenture purple overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered text */
+.caption {
+    text-align: center;
+    color: white;
+}
+
+.caption h6 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.caption h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.caption em {
+    color: #A100FF; /* Accenture pink-purple */
+    font-style: normal;
+}
+
+/* Button */
+.main-button a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #A100FF;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+        
+
         /* ===== Preloader Wrapper ===== */
 .js-preloader {
   position: fixed;
@@ -167,7 +240,7 @@
         /* HEADER */
         header {
             background: url('') center/cover no-repeat; 
-            height: 100vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -334,13 +407,13 @@
 
                         
                         
-     <div class="main-banner" id="top">
+     <div class="header" id="top">
         <video autoplay muted loop id="bg-video">
             <source src="bg-video.mp4" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
-             <h1>Rowana Consult</h1>
+             <h6>Rowana Consult</h6>
     <p>Professional sports consulting for athlete development, facility upgrades, curriculum design, and event management.</p>
 
         </div>
